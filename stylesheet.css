@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-size: 28px;
+}
+
+body, html, .main {
+    height: 100%;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.countdown {
+     padding: 75px;
+     background-image: url('mn.png');
+     font-family: Arial;
+     margin-left: calc(50% - 50vw);
+     width: 100vw;
+}
+
+.countdown2 {
+     padding: 75px;
+     background-image: url('https://i.pinimg.com/originals/0b/75/09/0b7509702c2b8fefc25f45b174233051.jpg');
+     font-family: Arial;
+     margin-left: calc(50% - 50vw);
+     width: 100vw;
+}
+
+.square {
+     padding: 10px;
+     background-color: white;
+}
+
+.section1 {
+     padding: 75px;
+     background-color: #cccccc;
+     font-family: Arial;
+     color: black;
+     margin-left: calc(50% - 50vw);
+     width: 100vw;
+}
+
+.mailing {
+     padding: 75px;
+     background-image: url('mailbkg');
+     font-family: Arial;
+     color: black;
+     margin-left: calc(50% - 50vw);
+     width: 100vw;
+}
+
+.footer {
+     padding: 30px;
+     background-color: #dbdbdb;
+     font-family: Arial;
+     color: black;
+     margin-left: calc(50% - 50vw);
+     width: 100vw;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: DodgerBlue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+$('a[href^="#"]').click(function () {
+    $('html, body').animate({
+        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+    }, 500);
+
+    return false;
+});
